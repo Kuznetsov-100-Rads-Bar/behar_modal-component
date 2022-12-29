@@ -22,7 +22,8 @@ function myComponent() {
             visible={showModal}
             title={"My modal header title"}
             content={"My modal body content"}
-            // a function that is called when the modal is closed. In this case, the onClose function updates the value of showModal to false by calling the setShowModal function with an argument of false.
+            /* a function that is called when the modal is closed. In this case, the onClose function updates the value of showModal to false
+            by calling the setShowModal function with an argument of false.*/
             onClose={(event) => setShowModal(false)}
         />
     );
