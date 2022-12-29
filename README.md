@@ -11,6 +11,9 @@ npm i behar_modal-component --save
 
 ## Usage
 
+/*This code is a JavaScript module written in the syntax of the ECMAScript (ES) language and uses the JSX syntax extension.
+ which means it can be imported and used by other parts of the application.*/
+
 ```js
 import React, { useState } from 'react';
 import { Modal } from 'behar_modal-component';
