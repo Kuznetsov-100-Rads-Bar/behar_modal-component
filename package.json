@@ -1,6 +1,6 @@
 {
-  "name": "modal-component",
-  "version": "3.0.0",
+  "name": "behar_modal-component",
+  "version": "1.0.1",
   "description": "Simple modal component for react project.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
@@ -17,7 +17,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/"
+    "url": "https://github.com/Kuznetsov-100-Rads-Bar/p14_modal_component"
   },
   "devDependencies": {
     "@babel/core": "^7.17.0",
