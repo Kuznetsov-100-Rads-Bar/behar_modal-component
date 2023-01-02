@@ -41,12 +41,12 @@ The myComponent function is a functional component in React. It uses the useStat
 
 Inside the myComponent function, a JSX element is returned that represents a Modal component. This Modal component has several properties, or "props":
 
-    visible: a boolean value that determines whether the modal is visible or not. In this case,
+visible: a boolean value that determines whether the modal is visible or not. In this case,
     the value of visible is controlled by the value of the showModal state.
 
-    title: a string value that specifies the title of the modal.
+title: a string value that specifies the title of the modal.
 
-    content: a string value that specifies the content of the modal.
+content: a string value that specifies the content of the modal.
 
-    onClose: a function that is called when the modal is closed. In this case, the onClose function updates the value of showModal
-    to false by calling the setShowModal function with an argument of false.
+onClose: a function that is called when the modal is closed. In this case, the onClose function updates the value of showModal
+to false by calling the setShowModal function with an argument of false.
