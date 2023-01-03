@@ -31,6 +31,7 @@ export default function Modal({ visible, title, content, onClose }) {
             <div className='modal-container'>
                 <div className="modal-header">
                     <h3 className="modal-title">{title}</h3>
+                    <button className='modal-close_cross' onClick={() => handleClose()}>x</button>
                 </div>
                 <div className="modal-content">
                     <p className="modal-body">{content}</p>

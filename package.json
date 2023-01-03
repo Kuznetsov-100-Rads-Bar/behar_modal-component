@@ -1,6 +1,6 @@
 {
   "name": "behar_modal-component",
-  "version": "1.0.2",
+  "version": "1.0.8",
   "description": "Simple modal component for react project.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",

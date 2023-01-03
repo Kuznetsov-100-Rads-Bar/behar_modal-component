@@ -1,66 +1,81 @@
 .modal-display {
-    position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.25);
-    width: 100%;
-    min-height: 100vh;
-    z-index: 100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  min-height: 100vh;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .modal-container {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 5px;
-    width: 300px;
-    padding: 16px;
-    gap: 16px;
-    margin: 0 16px;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 5px;
+  width: 300px;
+  padding: 16px;
+  gap: 16px;
+  margin: 0 16px;
 }
 
 .modal-header {
-    color: black;
+  color: black;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);row-gap: 16px;
+}
+
+.modal-close_cross {
+  background-color: transparent !important;
+  border: none;
+  color: #000;
+  cursor: pointer;
+  font-size: 26px;
+  font-weight: 500;
+  margin-left: auto;
+  padding: 0;
+  line-height: 22px;
+}
+
+.modal-close_cross:hover {
+  background-color: transparent !important;
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-title {
-    margin: 0;
-    font-family: sans-serif;
-    font-weight: 500;
-    color: black;
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
+  margin: 0;
+  font-family: sans-serif;
+  font-weight: 500;
+  color: black;
+  gap: 16px;
 }
 
-.modal-title::after {
-    content: '';
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.25);
-    height: 1px;
-}
-
-.modal-content {
+.modal-header::after {
+  content: "";
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  height: 1px;
+  display: block;
 }
 
 .modal-body {
-    margin: 0;
-    font-family: sans-serif;
-    color: rgb(44, 44, 44);
+  margin: 0;
+  font-family: sans-serif;
+  color: rgb(44, 44, 44);
 }
 
 .modal-close_button {
-    border: none;
-    border-radius: 5px;
-    width: fit-content;
-    align-self: flex-end;
-    cursor: pointer;
-    padding: 8px 12px;
-    font-family: sans-serif;
-    background-color: #0070f3;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  align-self: flex-end;
+  cursor: pointer;
+  padding: 8px 12px;
+  font-family: sans-serif;
+  background-color: #0070f3;
 }
 
 .modal-close_button:hover {
