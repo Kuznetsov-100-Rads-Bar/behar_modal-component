@@ -28,10 +28,12 @@ function styleInject(css, ref) {
   }
 }
 
-var css_248z = ".modal-display{align-items:center;background-color:rgba(0,0,0,.5);display:flex;justify-content:center;left:0;min-height:100vh;position:fixed;top:0;width:100%;z-index:100}.modal-container{background-color:#fff;border-radius:5px;display:flex;flex-direction:column;gap:16px;margin:0 16px;padding:16px;width:300px}.modal-header{color:#000;display:grid;grid-template-columns:repeat(2,1fr);row-gap:16px}.modal-close_cross{background-color:transparent!important;border:none;color:#000;cursor:pointer;font-size:26px;font-weight:500;line-height:22px;margin-left:auto;padding:0}.modal-close_cross:hover{background-color:transparent!important;color:rgba(0,0,0,.5)}.modal-title{color:#000;font-family:sans-serif;font-weight:500;gap:16px;margin:0}.modal-header:after{background-color:rgba(0,0,0,.25);content:\"\";display:block;height:1px;width:100%}.modal-body{color:#2c2c2c;font-family:sans-serif;margin:0}.modal-close_button{align-self:flex-end;background-color:#0070f3;border:none;border-radius:5px;cursor:pointer;font-family:sans-serif;padding:8px 12px;width:fit-content}.modal-close_button:hover{background-color:#0055d4}";
+var css_248z = ".modal-display{align-items:center;display:flex;justify-content:center;left:0;min-height:100vh;position:fixed;top:0;width:100%;z-index:100}.modal-overlay{background-color:rgba(0,0,0,.5)}.modal-container{background-color:#fff;border-radius:5px;display:flex;flex-direction:column;gap:16px;margin:0 16px;padding:16px;width:300px}.modal-header{color:#000;display:grid;grid-template-columns:repeat(2,1fr);row-gap:16px}.modal-close_cross{background-color:transparent!important;border:none;color:#000;cursor:pointer;font-size:26px;font-weight:500;line-height:22px;margin-left:auto;padding:0}.modal-close_cross:hover{background-color:transparent!important;color:rgba(0,0,0,.5)}.modal-title{color:#000;font-family:sans-serif;font-weight:500;gap:16px;margin:0}.modal-header:after{background-color:rgba(0,0,0,.25);content:\"\";display:block;height:1px;width:100%}.modal-body{color:#2c2c2c;font-family:sans-serif;margin:0}.modal-close_button{align-self:flex-end;background-color:#0070f3;border:none;border-radius:5px;cursor:pointer;font-family:sans-serif;padding:8px 12px;width:fit-content}.modal-close_button:hover{background-color:#0055d4}";
 styleInject(css_248z);
 
 function Modal({
+  closeButton,
+  overlay = true,
   visible,
   title,
   content,
@@ -58,7 +60,7 @@ function Modal({
     return /*#__PURE__*/React.createElement(React.Fragment, null);
   }
   return /*#__PURE__*/ReactDOM.createPortal( /*#__PURE__*/React.createElement("div", {
-    className: "modal-display"
+    className: `modal-display ${overlay ? 'modal-overlay' : ''}`
   }, /*#__PURE__*/React.createElement("div", {
     className: "modal-container"
   }, /*#__PURE__*/React.createElement("div", {
@@ -72,10 +74,10 @@ function Modal({
     className: "modal-content"
   }, /*#__PURE__*/React.createElement("p", {
     className: "modal-body"
-  }, content)), /*#__PURE__*/React.createElement("button", {
+  }, content)), closeButton ? /*#__PURE__*/React.createElement("button", {
     onClick: () => handleClose(),
     className: "modal-close_button"
-  }, "Fermer"))), document.body);
+  }, "Fermer") : null)), document.body);
 }
 
 export { Modal };

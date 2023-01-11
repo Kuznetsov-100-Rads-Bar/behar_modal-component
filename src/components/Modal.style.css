@@ -2,13 +2,16 @@
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   min-height: 100vh;
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.modal-overlay {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .modal-container {
